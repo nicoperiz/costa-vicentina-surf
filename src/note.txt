@@ -1,0 +1,2 @@
+cd ~/Documenti/dev/surf-app
+npm run dev
