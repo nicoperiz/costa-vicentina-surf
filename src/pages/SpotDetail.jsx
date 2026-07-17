@@ -7,14 +7,16 @@ function SpotDetail() {
   const spot = spotList.find(s => s.name === nome)
 
   return (
-    <div>
-      <Link to="/">← Torna alla lista</Link>
+    <div className="page">
+      <Link to="/" className="back-link">← Torna alla lista</Link>
       <h1>{spot.name}</h1>
-      <p><strong>Livello:</strong> {spot.level}</p>
-      <p><strong>Onda:</strong> {spot.waveType}</p>
-      <p><strong>Break:</strong> {spot.breakType}</p>
-      <p><strong>Marea:</strong> {spot.tide}</p>
-      <p><strong>Note:</strong> {spot.notes}</p>
+      <span className={`badge badge-${spot.level}`}>{spot.level}</span>
+      <div className="detail-card">
+        <p><strong>Onda:</strong> {spot.waveType}</p>
+        <p><strong>Break:</strong> {spot.breakType}</p>
+        <p><strong>Marea:</strong> {spot.tide}</p>
+        <p><strong>Note:</strong> {spot.notes}</p>
+      </div>
     </div>
   )
 }

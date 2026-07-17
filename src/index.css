@@ -97,3 +97,25 @@ input {
 input:focus {
   border-color: #378add;
 }
+
+.back-link {
+  display: inline-block;
+  color: #4a7a96;
+  text-decoration: none;
+  margin-bottom: 20px;
+  font-size: 14px;
+}
+
+.detail-card {
+  background: white;
+  border: 1px solid #c8dce8;
+  border-radius: 10px;
+  padding: 20px;
+  margin-top: 16px;
+}
+
+.detail-card p {
+  margin-bottom: 10px;
+  font-size: 15px;
+  line-height: 1.5;
+}
