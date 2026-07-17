@@ -1,3 +1,4 @@
+import Mappa from '../components/Mappa'
 import { useParams } from 'react-router-dom'
 import { Link } from 'react-router-dom'
 import spotList from '../data/spots'
@@ -17,6 +18,7 @@ function SpotDetail() {
         <p><strong>Marea:</strong> {spot.tide}</p>
         <p><strong>Note:</strong> {spot.notes}</p>
       </div>
+      <Mappa lat={spot.lat} lon={spot.lon} nome={spot.name} />
     </div>
   )
 }
