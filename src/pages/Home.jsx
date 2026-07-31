@@ -1,3 +1,4 @@
+import Header from '../components/Header'
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import spotList from '../data/spots'
@@ -8,10 +9,7 @@ function Home() {
 
   return (
     <div>
-      <header>
-        <h1>🌊 Costa Vicentina</h1>
-        <p>Surf Guide — Southwest Portugal</p>
-      </header>
+      <Header />
       <div className="page">
         <input
           type="text"
