@@ -1,3 +1,4 @@
+import Header from "../components/Header";
 import { useState, useEffect } from "react";
 import Mappa from "../components/Mappa";
 import { useParams } from "react-router-dom";
@@ -11,51 +12,38 @@ function SpotDetail() {
 
   useEffect(() => {
     fetch(
-      `https://api.open-meteo.com/v1/forecast?latitude=${spot.lat}&longitude=${spot.lon}&current=temperature_2m,wind_speed_10m,wave_height`,
+      `https://api.open-meteo.com/v1/forecast?latitude=${spot.lat}&longitude=${spot.lon}&current=temperature_2m,wind_speed_10m,wave_height`
     )
       .then((r) => r.json())
       .then((dati) => setMeteo(dati.current));
   }, []);
 
   return (
-    <div className="page">
-      <Link to="/" className="back-link">
-        ← Torna alla lista
-      </Link>
-      <h1>{spot.name}</h1>
-      <span className={`badge badge-${spot.level}`}>{spot.level}</span>
-      <div className="detail-card">
-        <p>
-          <strong>Onda:</strong> {spot.waveType}
-        </p>
-        <p>
-          <strong>Break:</strong> {spot.breakType}
-        </p>
-        <p>
-          <strong>Marea:</strong> {spot.tide}
-        </p>
-        <p>
-          <strong>Note:</strong> {spot.notes}
-        </p>
-        {meteo && (
-          <div>
-            <p>
-              <strong>Temperatura:</strong> {meteo.temperature_2m}°C
-            </p>
-            <p>
-              <strong>Vento:</strong> {meteo.wind_speed_10m} km/h
-            </p>
-            {meteo.wave_height !== null && (
-              <p>
-                <strong>Onde:</strong> {meteo.wave_height} m
-              </p>
-            )}
-          </div>
-        )}
+    <div>
+      <Header />
+      <div className="page">
+        <Link to="/" className="back-link">← Torna alla lista</Link>
+        <h1>{spot.name}</h1>
+        <span className={`badge badge-${spot.level}`}>{spot.level}</span>
+        <div className="detail-card">
+          <p><strong>Onda:</strong> {spot.waveType}</p>
+          <p><strong>Break:</strong> {spot.breakType}</p>
+          <p><strong>Marea:</strong> {spot.tide}</p>
+          <p><strong>Note:</strong> {spot.notes}</p>
+          {meteo && (
+            <div>
+              <p><strong>Temperatura:</strong> {meteo.temperature_2m}°C</p>
+              <p><strong>Vento:</strong> {meteo.wind_speed_10m} km/h</p>
+              {meteo.wave_height !== null && (
+                <p><strong>Onde:</strong> {meteo.wave_height} m</p>
+              )}
+            </div>
+          )}
+        </div>
+        <Mappa lat={spot.lat} lon={spot.lon} nome={spot.name} />
       </div>
-      <Mappa lat={spot.lat} lon={spot.lon} nome={spot.name} />
     </div>
-  );
+  )
 }
 
 export default SpotDetail;

@@ -26,8 +26,8 @@ const spotList = [
     level: "Beginner",
     tide: "Mid tide",
     notes: "Works best with medium swells. Watch out for some rocks.",
-    lat: 37.3269,
-    lon: -8.8789
+    lat: 37.3274,
+    lon: -8.8792
   },
   {
     name: "Carrapateira",
@@ -36,8 +36,8 @@ const spotList = [
     level: "Advanced",
     tide: "Mid tide",
     notes: "Fast waves and strong rip currents. For experienced surfers.",
-    lat: 37.1933,
-    lon: -8.9005
+    lat: 37.1942,
+    lon: -8.9012
   },
   {
     name: "Bordeira",
@@ -56,8 +56,8 @@ const spotList = [
     level: "Advanced",
     tide: "All tides",
     notes: "Exposed to the full power of the Atlantic swell.",
-    lat: 36.9981,
-    lon: -8.9372
+    lat: 36.9967,
+    lon: -8.9389
   },
   {
     name: "Castelejo",
@@ -66,8 +66,8 @@ const spotList = [
     level: "Intermediate",
     tide: "Low tide",
     notes: "Very consistent and wild landscape. Remote vibes.",
-    lat: 37.1067,
-    lon: -8.9178
+    lat: 37.1089,
+    lon: -8.9189
   },
   {
     name: "Zambujeira",
@@ -76,8 +76,8 @@ const spotList = [
     level: "Advanced",
     tide: "Mid tide",
     notes: "Technical wave over a rocky bottom. For experts only.",
-    lat: 37.5253,
-    lon: -8.7884
+    lat: 37.5247,
+    lon: -8.7889
   }
 ];
 
