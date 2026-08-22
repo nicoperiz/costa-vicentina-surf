@@ -1,6 +1,6 @@
 import Header from "../components/Header";
 import { useState, useEffect } from "react";
-import Mappa from "../components/Mappa";
+import Map from "../components/Map";
 import { useParams } from "react-router-dom";
 import { Link } from "react-router-dom";
 import spotList from "../data/spots";
@@ -40,7 +40,7 @@ function SpotDetail() {
             </div>
           )}
         </div>
-        <Mappa lat={spot.lat} lon={spot.lon} nome={spot.name} />
+        <Map lat={spot.lat} lon={spot.lon} nome={spot.name} />
       </div>
     </div>
   )
