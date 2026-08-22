@@ -1,16 +1,28 @@
-# React + Vite
+# Costa Vicentina Surf Guide
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A React web app presenting the best surf spots along the Costa Vicentina, Southwest Portugal.
 
-Currently, two official plugins are available:
+## Live Demo
+[costa-vicentina-surf.netlify.app](https://costa-vicentina-surf.netlify.app)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Features
+- 8 surf spots with details, difficulty level and best tide
+- Filter by skill level and live search
+- Interactive map with Leaflet.js
+- Real-time weather data (temperature and wind) via Open-Meteo API
 
-## React Compiler
+## Tech Stack
+- React 19
+- React Router
+- Leaflet / React-Leaflet
+- Open-Meteo API
+- Vite
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Run locally
+```bash
+npm install
+npm run dev
+```
 
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Author
+Nico Periz
