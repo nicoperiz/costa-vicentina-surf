@@ -13,12 +13,12 @@ function Home() {
       <div className="page">
         <input
           type="text"
-          placeholder="Cerca uno spot..."
+          placeholder="Search a spot..."
           value={ricerca}
           onChange={(e) => setRicerca(e.target.value)}
         />
         <div className="filtri">
-          <button className={filtro === 'all' ? 'active' : ''} onClick={() => setFiltro('all')}>Tutti</button>
+          <button className={filtro === 'all' ? 'active' : ''} onClick={() => setFiltro('all')}>All</button>
           <button className={filtro === 'Beginner' ? 'active' : ''} onClick={() => setFiltro('Beginner')}>Beginner</button>
           <button className={filtro === 'Intermediate' ? 'active' : ''} onClick={() => setFiltro('Intermediate')}>Intermediate</button>
           <button className={filtro === 'Advanced' ? 'active' : ''} onClick={() => setFiltro('Advanced')}>Advanced</button>

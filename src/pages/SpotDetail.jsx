@@ -22,20 +22,20 @@ function SpotDetail() {
     <div>
       <Header />
       <div className="page">
-        <Link to="/" className="back-link">← Torna alla lista</Link>
+        <Link to="/" className="back-link">← Back to list</Link>
         <h1>{spot.name}</h1>
         <span className={`badge badge-${spot.level}`}>{spot.level}</span>
         <div className="detail-card">
-          <p><strong>Onda:</strong> {spot.waveType}</p>
+          <p><strong>Wave:</strong> {spot.waveType}</p>
           <p><strong>Break:</strong> {spot.breakType}</p>
-          <p><strong>Marea:</strong> {spot.tide}</p>
-          <p><strong>Note:</strong> {spot.notes}</p>
+          <p><strong>Tide:</strong> {spot.tide}</p>
+          <p><strong>Notes:</strong> {spot.notes}</p>
           {meteo && (
             <div>
-              <p><strong>Temperatura:</strong> {meteo.temperature_2m}°C</p>
-              <p><strong>Vento:</strong> {meteo.wind_speed_10m} km/h</p>
+              <p><strong>Temperature:</strong> {meteo.temperature_2m}°C</p>
+              <p><strong>Wind:</strong> {meteo.wind_speed_10m} km/h</p>
               {meteo.wave_height !== null && (
-                <p><strong>Onde:</strong> {meteo.wave_height} m</p>
+                <p><strong>Wave Height:</strong> {meteo.wave_height} m</p>
               )}
             </div>
           )}
