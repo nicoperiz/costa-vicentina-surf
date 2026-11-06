@@ -26,8 +26,8 @@ const spotList = [
     level: "Intermediate",
     tide: "Mid/High",
     notes: "Located under the cliffs, very well protected from north winds.",
-    lat: 37.2969,
-    lon: -8.8731
+    lat: 37.2938,
+    lon: -8.8664
   },
   {
     name: "Amado",
@@ -36,8 +36,8 @@ const spotList = [
     level: "All levels",
     tide: "All tides",
     notes: "Very consistent spot, perfect for learning and daily surf.",
-    lat: 37.2208,
-    lon: -8.8594
+    lat: 37.1673,
+    lon: -8.9043
   },
   {
     name: "Bordeira",
@@ -56,8 +56,8 @@ const spotList = [
     level: "Advanced",
     tide: "Mid tide",
     notes: "Fast waves and strong rip currents. For experienced surfers.",
-    lat: 37.1942,
-    lon: -8.9012
+    lat: 37.2000,
+    lon: -8.9038
   },
   {
     name: "Castelejo",
@@ -66,8 +66,8 @@ const spotList = [
     level: "Intermediate",
     tide: "Low tide",
     notes: "Very consistent and wild landscape. Remote vibes.",
-    lat: 37.1089,
-    lon: -8.9189
+    lat: 37.1003,
+    lon: -8.9471
   },
   {
     name: "Sagres (Tonèl)",
@@ -76,8 +76,8 @@ const spotList = [
     level: "Advanced",
     tide: "All tides",
     notes: "Exposed to the full power of the Atlantic swell.",
-    lat: 36.9967,
-    lon: -8.9389
+    lat: 37.0056,
+    lon: -8.9490
   }
 ];
 
