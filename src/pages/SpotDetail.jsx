@@ -11,12 +11,22 @@ function SpotDetail() {
   const [meteo, setMeteo] = useState(null);
 
   useEffect(() => {
+    if (!spot) return;
+
     fetch(
       `https://api.open-meteo.com/v1/forecast?latitude=${spot.lat}&longitude=${spot.lon}&current=temperature_2m,wind_speed_10m,wave_height`
     )
       .then((r) => r.json())
-      .then((dati) => setMeteo(dati.current));
-  }, []);
+      .then((dati) => setMeteo(dati.current))
+      .catch((error) => {
+        console.error(error);
+        setMeteo(null);
+      });
+  }, [spot]);
+
+  if (!spot) {
+    return <p>Spot not found.</p>;
+  }
 
   return (
     <div>

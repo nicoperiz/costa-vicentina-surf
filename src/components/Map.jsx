@@ -10,6 +10,10 @@ L.Icon.Default.mergeOptions({
 })
 
 function Mappa({ lat, lon, nome }) {
+  if (!lat || !lon) {
+    return <p>Coordinates not available.</p>;
+  }
+
   return (
     <MapContainer center={[lat, lon]} zoom={13} style={{ height: '300px', borderRadius: '10px' }}>
       <TileLayer

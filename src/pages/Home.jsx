@@ -7,6 +7,12 @@ function Home() {
   const [filtro, setFiltro] = useState('all')
   const [ricerca, setRicerca] = useState('')
 
+  const spotFiltrati = spotList.filter(spot => {
+    const matchLivello = filtro === 'all' || spot.level === filtro
+    const matchRicerca = spot.name.toLowerCase().includes(ricerca.toLowerCase())
+    return matchLivello && matchRicerca
+  })
+
   return (
     <div>
       <Header />
@@ -25,19 +31,16 @@ function Home() {
           <button className={filtro === 'All levels' ? 'active' : ''} onClick={() => setFiltro('All levels')}>All levels</button>
         </div>
         <div>
-          {spotList
-            .filter(spot => {
-              const matchLivello = filtro === 'all' || spot.level === filtro
-              const matchRicerca = spot.name.toLowerCase().includes(ricerca.toLowerCase())
-              return matchLivello && matchRicerca
-            })
-            .map(spot => (
-              <Link to={`/spot/${spot.name}`} key={spot.name} className="card">
-                <h2>{spot.name}</h2>
-                <span className={`badge badge-${spot.level}`}>{spot.level}</span>
-                <p className="card-sub">{spot.waveType} · {spot.breakType}</p>
-              </Link>
-            ))}
+          {spotFiltrati.length === 0 && (
+            <p className="no-results">No spots found. Try a different search.</p>
+          )}
+          {spotFiltrati.map(spot => (
+            <Link to={`/spot/${spot.name}`} key={spot.name} className="card">
+              <h2>{spot.name}</h2>
+              <span className={`badge badge-${spot.level}`}>{spot.level}</span>
+              <p className="card-sub">{spot.waveType} · {spot.breakType}</p>
+            </Link>
+          ))}
         </div>
       </div>
     </div>
