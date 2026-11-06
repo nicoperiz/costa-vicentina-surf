@@ -2,6 +2,8 @@
 
 A React web app presenting the best surf spots along the Costa Vicentina, Southwest Portugal.
 
+Spots are listed from north to south, following the coastline.
+
 ## Live Demo
 [costa-vicentina-surf.netlify.app](https://costa-vicentina-surf.netlify.app)
 

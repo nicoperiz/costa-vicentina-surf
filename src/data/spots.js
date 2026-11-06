@@ -1,5 +1,25 @@
 const spotList = [
   {
+    name: "Zambujeira",
+    waveType: "Short and hollow",
+    breakType: "Reef break",
+    level: "Advanced",
+    tide: "Mid tide",
+    notes: "Technical wave over a rocky bottom. For experts only.",
+    lat: 37.5247,
+    lon: -8.7889
+  },
+  {
+    name: "Monte Clérigo",
+    waveType: "Right and Left",
+    breakType: "Beach break",
+    level: "Beginner",
+    tide: "Mid tide",
+    notes: "Works best with medium swells. Watch out for some rocks.",
+    lat: 37.3274,
+    lon: -8.8792
+  },
+  {
     name: "Arrifana",
     waveType: "Right and long Left",
     breakType: "Point break",
@@ -20,14 +40,14 @@ const spotList = [
     lon: -8.8594
   },
   {
-    name: "Monte Clérigo",
-    waveType: "Right and Left",
+    name: "Bordeira",
+    waveType: "Long Left and peaks",
     breakType: "Beach break",
     level: "Beginner",
-    tide: "Mid tide",
-    notes: "Works best with medium swells. Watch out for some rocks.",
-    lat: 37.3274,
-    lon: -8.8792
+    tide: "Low/Mid tide",
+    notes: "Huge beach with plenty of space, can have strong currents.",
+    lat: 37.2061,
+    lon: -8.9014
   },
   {
     name: "Carrapateira",
@@ -40,26 +60,6 @@ const spotList = [
     lon: -8.9012
   },
   {
-    name: "Bordeira",
-    waveType: "Long Left and peaks",
-    breakType: "Beach break",
-    level: "Beginner",
-    tide: "Low/Mid tide",
-    notes: "Huge beach with plenty of space, can have strong currents.",
-    lat: 37.2061,
-    lon: -8.9014
-  },
-  {
-    name: "Sagres (Tonèl)",
-    waveType: "Powerful Right",
-    breakType: "Point break",
-    level: "Advanced",
-    tide: "All tides",
-    notes: "Exposed to the full power of the Atlantic swell.",
-    lat: 36.9967,
-    lon: -8.9389
-  },
-  {
     name: "Castelejo",
     waveType: "Fast peaks",
     breakType: "Beach break",
@@ -70,14 +70,14 @@ const spotList = [
     lon: -8.9189
   },
   {
-    name: "Zambujeira",
-    waveType: "Short and hollow",
-    breakType: "Reef break",
+    name: "Sagres (Tonèl)",
+    waveType: "Powerful Right",
+    breakType: "Point break",
     level: "Advanced",
-    tide: "Mid tide",
-    notes: "Technical wave over a rocky bottom. For experts only.",
-    lat: 37.5247,
-    lon: -8.7889
+    tide: "All tides",
+    notes: "Exposed to the full power of the Atlantic swell.",
+    lat: 36.9967,
+    lon: -8.9389
   }
 ];
 
